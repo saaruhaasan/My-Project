@@ -141,3 +141,10 @@ resource "aws_instance" "web_ap" {
     Name = "nginx-us-west"
   }
 }
+output "us_east_public_ip" {
+  value = aws_instance.nginx_us_east.public_ip
+}
+
+output "us_west_public_ip" {
+  value = aws_instance.nginx_us_west.public_ip
+}
